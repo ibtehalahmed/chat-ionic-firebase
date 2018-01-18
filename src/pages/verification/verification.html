@@ -1,0 +1,59 @@
+<!-- <ion-content>
+  <div *ngIf="user" class="page">
+    <div style="text-align:center">
+      <img src="http://placehold.it/150x150" />
+    </div>    
+    <ion-list padding no-lines>
+      <ion-item>
+        <ion-label stacked>Name</ion-label>
+        <ion-input type="text" placeholder="Fullname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Mobile</ion-label>
+        <ion-input type="text" placeholder="mobile"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Email</ion-label>
+        <ion-input type="text" value="{{user.email}}"></ion-input>
+        <button ion-button clear>Save &amp; Update Email</button>
+      </ion-item>
+      <button ion-button block>Continue</button>
+      <button ion-button clear block (click)="logout()">Logout</button>
+    </ion-list> 
+    
+    
+    <ion-row style="text-align: center;">
+      <ion-col>
+        <ion-icon name="refresh" tappable (click)="sendEmailVerification()"></ion-icon>
+        <p>Resend</p>
+      </ion-col>
+      <!-- <ion-col>
+        <ion-icon name="mail" tappable (click)="setEmail()"></ion-icon>
+        <p>Update Email</p>
+      </ion-col> -->
+      <!-- <ion-col>
+        <ion-icon name="log-out" tappable (click)="logout()"></ion-icon>
+        <p>Logout</p>
+      </ion-col> -->
+    <!-- </ion-row>
+  </div> -->
+
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-title>Update Profile</ion-title>
+  </ion-navbar>
+</ion-header> -->
+<ion-content>
+  <div *ngIf="user" style="text-align: center">
+    <div class="top">
+        <img src="http://placehold.it/150x150" tappable (click)="setPhoto()">
+        <h3 tappable (click)="setName()">{{user.name}}</h3>
+        <p tappable (click)="setUsername()" >@{{user.username}}</p>
+    </div>
+    <div class="bottom">
+        <button ion-button clear block (click)="setEmail()">Change Email Address</button>
+        <button ion-button clear block (click)="logout()">Logout</button>
+    </div>
+  </div>
+
+</ion-content>

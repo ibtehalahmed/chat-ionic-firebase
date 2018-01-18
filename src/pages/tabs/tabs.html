@@ -1,0 +1,6 @@
+<ion-tabs selectedIndex="0">
+  <ion-tab [root]="messages" tabIcon="chatbubbles" tabBadgeStyle="danger" tabBadge="{{getUnreadMessagesCount()}}"></ion-tab>
+  <ion-tab [root]="groups" tabIcon="people" tabBadgeStyle="danger" tabBadge="{{getUnreadGroupMessagesCount()}}"></ion-tab>
+  <ion-tab [root]="friends" tabIcon="list" tabBadgeStyle="danger" tabBadge="{{friendRequestCount}}"></ion-tab>
+  <ion-tab [root]="profile" tabIcon="contact"></ion-tab>
+</ion-tabs>

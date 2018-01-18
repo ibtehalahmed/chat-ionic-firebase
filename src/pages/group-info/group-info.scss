@@ -1,0 +1,17 @@
+page-group-info {
+  .members {
+    text-align: center;
+
+    img {
+      border-radius: 100%;
+      width: 3.25em;
+      height: 3.25em;
+      margin: 0.5em;
+    }
+
+    img.activated,
+    img:active {
+      opacity: 0.5;
+    }
+  }
+}

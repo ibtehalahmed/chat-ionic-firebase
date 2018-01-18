@@ -1,0 +1,42 @@
+page-verification {
+  ion-content{
+    padding-top: 30vh;
+  }
+  img {
+    height: 80px;
+    width: 80px;
+    border-radius: 100%; 
+  }
+  .top{
+    background: $primary;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center
+  }
+  .page{
+    margin-top: 10vh;
+  }
+  .item-ios{
+    background: transparent;
+  }
+  h4,
+  p {
+    text-align: center;
+  }
+
+  h4 {
+    color: $primary;
+  }
+
+  p {
+    color: $gray;
+  }
+
+  p span {
+    color: $primary;
+  }
+  ion-icon{
+    color: $primary;
+    font-size: 2.5em;
+  }
+}

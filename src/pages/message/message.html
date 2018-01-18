@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title (click)="viewUser(userId)">{{title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content has-footer>
+  <!-- Messages -->
+  <div class="messages">
+    <p class="center" *ngIf="startIndex > 0"><span tappable (click)="loadPreviousMessages()">Load previous messages</span></p>
+    
+    <div *ngFor="let message of messagesToShow">
+      <div class="sender" *ngIf="isSender(message)" class="chatbox left">
+        <div *ngIf="message.type == 'text'">
+          <p>{{message.message}}</p>
+        </div>
+        <div *ngIf="message.type == 'image'">
+          <img tappable (click)="enlargeImage(message.url)" src="{{message.url}}" (load)="doScroll()" />
+        </div>
+        <div *ngIf="message.type == 'video'">
+          <video controls width="100%" (load)="doScroll()">
+             <source src="{{message.url}}" type="video/mp4">
+          </video>
+        </div>
+        <span>{{message.date | DateFormat}}</span>
+      </div>
+      <div *ngIf="!isSender(message)" class="chatbox right">
+        <div *ngIf="message.type == 'text'">
+          <p>{{message.message}}</p>
+        </div>
+        <div  *ngIf="message.type == 'image'">
+          <img tappable (click)="enlargeImage(message.url)" src="{{message.url}}" (load)="doScroll()" />
+        </div>
+        <div *ngIf="message.type == 'video'">
+          <video controls width="100%" (load)="doScroll()">
+             <source src="{{message.url}}" type="video/mp4">
+          </video>
+        </div>
+        <span>{{message.date | DateFormat}}</span>
+      </div>
+    </div>
+    
+  </div>
+</ion-content>
+<!-- Message Box -->
+<ion-footer>
+  <ion-item class="bottom_bar">
+    <button item-left ion-button clear (click)="attach()"><ion-icon name="md-attach"></ion-icon></button>
+    <ion-textarea type="text" rows="0" placeholder="Type your message" [(ngModel)]="message" (focus)="scrollBottom()" (keypress)="onType($event.keyCode)"></ion-textarea>
+    <!-- <ion-buttons item-right> -->
+    <button item-right ion-button clear (click)="takePhoto()"><ion-icon name="md-camera"></ion-icon></button>
+    <button item-right ion-button clear (click)="send()" [disabled]="!message"><ion-icon name="md-send"></ion-icon></button>
+    <!-- </ion-buttons> -->
+  </ion-item>
+</ion-footer>

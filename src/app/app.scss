@@ -1,0 +1,172 @@
+// http://ionicframework.com/docs/v2/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+//Add class="no-scroll" on <ion-content> to disable scrolling
+.no-scroll .scroll-content {
+  overflow: hidden;
+}
+
+//Center Class to align content to center.
+.center {
+  text-align: center;
+}
+.tabs-ios .tabbar{
+  background: $primary;
+}
+.header-ios .toolbar-background-ios, .footer-ios .toolbar-background-ios{
+  border-style: none;
+}
+.top{
+  background: $primary;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: #fff;
+}
+.top img{
+  height: 80px;
+  width: 80px;
+}
+
+.chatbox{
+  padding:3px;
+  border-radius: 5px;
+  max-width: 70%;
+  min-width: 70%;
+  margin: 5px;
+}
+.chatbox span{
+  font-size: 12px;
+}
+.right{
+  border-radius: 5px;
+  background: $chat-right-bg;
+  color: $chat-right-color;
+  float: right;
+  text-align: right;
+  padding-right: 5px
+}
+.left{
+  border-radius: 5px;
+  background: $chat-left-bg;
+  color:$chat-left-color;
+  float: left;
+  text-align: left;
+  padding-left: 5px
+}
+video{
+  background: $chat-left-bg;
+  border-radius: 5px;
+}
+
+//Empty List
+.empty-list {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+
+  h1,
+  p {
+    color: $gray;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  p {
+    font-size: 1.125em;
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  button {
+    background: $dark;
+  }
+
+  button.activated,
+  button:active {
+    background: $dark-active;
+  }
+}
+
+//Avatar List
+ion-list.avatar-list {
+
+  ion-item.selected,
+  ion-item:active {
+    opacity: 0.5;
+  }
+
+  ion-fab button,
+  ion-fab button.activated {
+    background: transparent !important;
+  }
+
+  ion-fab button.activated ion-icon {
+    opacity: 0.5 !important;
+  }
+
+  ion-fab button ion-icon {
+    font-size: 2em !important;
+    color: $primary;
+  }
+
+  ion-icon.success {
+    color: $primary;
+  }
+
+  ion-icon.danger {
+    color: color($colors, danger);
+  }
+}
+
+
+//Footer Bar for message.html and group.html
+ion-footer.footer {
+  background-position: initial initial;
+  background-repeat: initial initial;
+}
+
+.bottom_bar {
+  padding-top: 0.25em;
+  // padding-bottom: 0.25em;
+  border-top: 1px solid #e1e1e1;
+
+  ion-textarea {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+    border-radius: 0.75em;
+  }
+
+  ion-fab button,
+  ion-fab button.activated {
+    background: transparent !important;
+  }
+
+  ion-fab button.activated ion-icon {
+    opacity: 0.5 !important;
+  }
+
+  button ion-icon {
+    font-size: 2em !important;
+    color: $primary;
+  }
+}

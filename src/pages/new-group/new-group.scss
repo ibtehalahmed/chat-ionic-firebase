@@ -1,0 +1,61 @@
+page-new-group {
+  ion-icon{
+    font-size: 2em;
+  }
+
+  ion-list, ion-item{
+    background: transparent;
+  }
+  ion-input, ion-textarea{
+    background: #fff;
+    margin: 1px;
+    padding-left: 5px;
+    border-radius: 5px;
+  }
+  
+  .members {
+    text-align: center;
+
+    img {
+      border-radius: 100%;
+      width: 3.25em;
+      height: 3.25em;
+      margin: 0.5em;
+    }
+  }
+  img{
+    height: 70px;
+    width:70px;
+    border-radius: 100%;
+  }
+
+  .empty {
+    text-align: center;
+    padding-bottom: 2em;
+
+    h1,
+    p {
+      color: $gray;
+    }
+
+    h1 {
+      font-size: 3em;
+    }
+
+    p {
+      font-size: 1.125em;
+      width: 70vw;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    button {
+      background: $dark;
+    }
+
+    button.activated,
+    button:active {
+      background: $dark-active;
+    }
+  }
+}

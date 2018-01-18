@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons end>
+      <button ion-button clear (click)="closeModel()">
+        CANCEL
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="app-icon">
+    <ion-icon name="ios-chatbubbles-outline" ></ion-icon>
+    <h4>CREATE ACCOUNT</h4>
+  </div>
+  <form [formGroup]="emailPasswordForm" padding>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Full Name</ion-label>
+      <ion-input type="text" formControlName="fullname"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Username (min 5 char)</ion-label>
+      <ion-input type="text" formControlName="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Email</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Password</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+    <button ion-button block (click)="register()" color="dark" [disabled]="!emailPasswordForm.valid">Register Now</button>
+  </ion-list>
+  </form>
+</ion-content>

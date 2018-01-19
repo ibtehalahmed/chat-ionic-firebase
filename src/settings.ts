@@ -4,7 +4,12 @@ import { VerificationPage } from './pages/verification/verification';
 export namespace Settings {
   // replace with your key
   export const firebaseConfig = {
-
+    apiKey: "AIzaSyAESjVeLlSnYFPjBz2K7L20i-WSATLNz8k",
+    authDomain: "hbcuwallstreet-db863.appspot.com",
+    databaseURL: "https://moneychat-be2e3.firebaseio.com",
+    projectId: "project-39065714117",
+    storageBucket: "hbcuwallstreet-db863.appspot.com",
+    messagingSenderId: ""
   };
 
   // For Facebook Login

@@ -77,7 +77,7 @@ export class DataProvider {
 
   // Get groups of the logged in user.
   getGroups() {
-    return this.angularfire.list('/groups');
+    return this.angularfire.list('/accounts/' + firebase.auth().currentUser.uid + '/groups');
   }
 
   // Get group info given the groupId.

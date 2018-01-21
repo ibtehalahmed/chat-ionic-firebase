@@ -14,7 +14,7 @@ export namespace Settings {
 
   // For Facebook Login
   export const facebookLoginEnabled = true;
-  export const facebookAppId: string = "767580770058358"; // Not required, If you're not using FBLogin
+  export const facebookAppId: string = "469723673423568"; // Not required, If you're not using FBLogin
 
   //For Google Login
   export const googleLoginEnabled = true;

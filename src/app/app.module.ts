@@ -55,11 +55,15 @@ import { Geolocation } from '@ionic-native/geolocation';
 import { Firebase } from '@ionic-native/firebase';
 import { Facebook } from '@ionic-native/facebook';
 
+import {HttpModule, Http} from '@angular/http';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpModule } from '@angular/http';
 
 firebase.initializeApp(Settings.firebaseConfig);
-
+export function createTranslateLoader(http: Http) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 @NgModule({
   declarations: [
     MyApp,
@@ -95,10 +99,16 @@ firebase.initializeApp(Settings.firebaseConfig);
       mode: 'md'
     }),
     BrowserModule,
+    HttpModule,
     AngularFireModule.initializeApp(Settings.firebaseConfig,'ionic3chat'),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    HttpModule
+    TranslateModule.forRoot({
+      loader: {
+      provide: TranslateLoader,
+      useFactory: (createTranslateLoader),
+      deps: [Http]
+    }})
   ],
   bootstrap: [IonicApp],
   entryComponents: [

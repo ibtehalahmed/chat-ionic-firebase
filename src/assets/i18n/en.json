@@ -1,0 +1,10 @@
+{
+  "HELLO": "Welcome to",
+  "forgotPassword?": "Forgot ?",
+  "password": "Password",
+  "MENU" : {
+    "PORTUGUESE" : "in Portuguese",
+    "ENGLISH" : "in English",
+    "FRENCH" : "in French"
+  }
+}

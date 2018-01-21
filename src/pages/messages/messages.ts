@@ -18,7 +18,10 @@ export class MessagesPage {
   // MessagesPage
   // This is the page where the user can see their current conversations with their friends.
   // The user can also start a new conversation.
-  constructor(public navCtrl: NavController, public navParams: NavParams, public angularfire: AngularFireDatabase, public loadingProvider: LoadingProvider, public app: App, public dataProvider: DataProvider) { }
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public angularfire: AngularFireDatabase,
+              public loadingProvider: LoadingProvider, public app: App, public dataProvider: DataProvider) { }
 
   ionViewDidLoad() {
 
@@ -63,7 +66,7 @@ export class MessagesPage {
             });
           }
         });
-        
+
         this.loadingProvider.hide();
       } else {
         this.conversations = [];

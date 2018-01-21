@@ -3,8 +3,7 @@
     <ion-title>New Group</ion-title>
     <!-- New Group can only be added when a group form is filled up, image is uploaded, and there's more than one member. -->
     <ion-buttons end>
-      <button ion-button tappable (click)="done()" [disabled]="!groupForm.valid || group.img == ''">Done</button>
-    </ion-buttons>
+      <button ion-button tappable (click)="done()" [disabled]="!groupForm.valid || group.img == '' || groupMembers.length <= 1">Done</button>     </ion-buttons>
   </ion-navbar>
 </ion-header>
 <ion-content>

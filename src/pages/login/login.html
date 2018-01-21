@@ -10,12 +10,12 @@
             <ion-input type="text" formControlName="email" placeholder="Email address"></ion-input>
           </ion-item>
           <ion-item>
-            <ion-input type="password" formControlName="password" placeholder="Password"></ion-input>
-            <button item-right ion-button clear color="gray" (click)="forgotPassword()" >Forgot ?</button> 
+            <ion-input type="password" formControlName="password" placeholder="{{'password' | translate}}"></ion-input>
+            <button item-right ion-button clear color="gray" (click)="forgotPassword()">{{'forgotPassword?' | translate}}</button>
           </ion-item>
           <div>
             <button ion-button color="dark" block tappable (click)="login()" [disabled]="!emailPasswordForm.valid">Login</button>
-            
+
           </div>
         </form>
       </ion-list>
@@ -30,6 +30,6 @@
         <button *ngIf="phoneLoginEnabled==true" ion-button color="dark" tappable (click)="loginProvider.phoneLogin()"><ion-icon name="phone-portrait"></ion-icon></button>
     </div>
   </div>
-  
-  
+
+
 </ion-content>
